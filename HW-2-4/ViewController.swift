@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 20
     }
+    
+    override func viewDidLayoutSubviews() {
+        changeUiViewColor()
+    }
 
     @IBAction func redSliderAction() {
         redLabel.text = redSlider.value.formatted()
@@ -35,6 +39,13 @@ class ViewController: UIViewController {
         greenLabel.text = greenSlider.value.formatted()
     }
     
+    private func changeUiViewColor() {
+        colorView.layer.backgroundColor = CGColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
+    }
     
 }
 
