@@ -18,8 +18,6 @@
                         <subviews>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gWX-uA-spb">
                                 <rect key="frame" x="16" y="99" width="361" height="101"/>
-                                <color key="backgroundColor" red="0.7599891583944105" green="0.7599891583944105" blue="0.7599891583944105" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="S8L-rb-o8i">
                                 <rect key="frame" x="16.000000000000004" y="273" width="59.333333333333343" height="93"/>
@@ -120,8 +118,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueLabel" destination="a8N-Ke-xQH" id="NgF-n8-nDy"/>
                         <outlet property="blueSlider" destination="RNl-1y-jYw" id="Lfb-B9-lSe"/>
-                        <outlet property="bluerLabel" destination="a8N-Ke-xQH" id="NgF-n8-nDy"/>
                         <outlet property="colorView" destination="gWX-uA-spb" id="061-Ts-4Dj"/>
                         <outlet property="greenLabel" destination="NRk-gf-JCP" id="ESF-IH-j63"/>
                         <outlet property="greenSlider" destination="Zrn-cI-dLF" id="5pi-w8-gpL"/>

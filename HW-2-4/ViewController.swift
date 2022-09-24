@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var colorView: UIView!
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var redSlider: UISlider!
-    @IBOutlet var bluerLabel: UILabel!
+    @IBOutlet var blueLabel: UILabel!
     @IBOutlet var blueSlider: UISlider!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var greenSlider: UISlider!
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func blueSliderAction() {
-        bluerLabel.text = blueSlider.value.formatted()
+        blueLabel.text = blueSlider.value.formatted()
     }
     
     @IBAction func greenSliderAction() {
