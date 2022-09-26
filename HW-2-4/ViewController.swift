@@ -11,12 +11,18 @@ class ViewController: UIViewController {
 
     
     @IBOutlet var colorView: UIView!
+    
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var blueLabel: UILabel!
+    
     @IBOutlet var blueSlider: UISlider!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var greenSlider: UISlider!
+    
+    override func viewDidLoad() {
+        colorView.layer.cornerRadius = 20
+    }
 
     @IBAction func sliderAction() {
         redLabel.text = String(format: "%.2f", redSlider.value)
@@ -26,7 +32,6 @@ class ViewController: UIViewController {
     }
     
     private func changeColorView() {
-        colorView.layer.cornerRadius = 25
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
