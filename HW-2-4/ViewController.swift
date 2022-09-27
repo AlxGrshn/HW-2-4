@@ -23,13 +23,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 15
+        changeColorView()
+        setValue()
     }
 
     @IBAction func sliderAction(_ sender: UISlider) {
         switch sender {
-        case redSlider: redLabel.text = String(format: "%.2f", redSlider.value)
-        case blueSlider: blueLabel.text = String(format: "%.2f", blueSlider.value)
-        case greenSlider: greenLabel.text = String(format: "%.2f", greenSlider.value)
+        case redSlider: redLabel.text = redSlider.value.roundFloat()
+        case blueSlider: blueLabel.text = blueSlider.value.roundFloat()
+        case greenSlider: greenLabel.text = greenSlider.value.roundFloat()
         default: return
         }
         changeColorView()
@@ -41,5 +43,17 @@ class ViewController: UIViewController {
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1)
+    }
+    
+    private func setValue() {
+        redLabel.text = redSlider.value.roundFloat()
+        blueLabel.text = blueSlider.value.roundFloat()
+        greenLabel.text = greenSlider.value.roundFloat()
+    }
+}
+
+extension Float {
+    func roundFloat() -> String {
+        String(format: "%.2f", self)
     }
 }
