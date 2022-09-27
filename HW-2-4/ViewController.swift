@@ -21,13 +21,17 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     
     override func viewDidLoad() {
-        colorView.layer.cornerRadius = 20
+        super.viewDidLoad()
+        colorView.layer.cornerRadius = 15
     }
 
-    @IBAction func sliderAction() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
+    @IBAction func sliderAction(_ sender: UISlider) {
+        switch sender {
+        case redSlider: redLabel.text = String(format: "%.2f", redSlider.value)
+        case blueSlider: blueLabel.text = String(format: "%.2f", blueSlider.value)
+        case greenSlider: greenLabel.text = String(format: "%.2f", greenSlider.value)
+        default: return
+        }
         changeColorView()
     }
     
